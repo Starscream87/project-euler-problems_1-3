@@ -97,22 +97,6 @@ nav ul li span:hover {
 	color: #5c3d3d;
 }
 
-
-/*#innerBox {
-	position: relative;
-	width: 75%;
-	margin: auto;
-	border: 2px solid #999;
-	
-	border-radius: 10px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	
-	box-shadow: 0 0 4px 4px #d6d9aa;
-	-webkit-box-shadow: 0 0 5px 7px #d6d9aa;
-	-moz-box-shadow: 0 0 4px 4px #d6d9aa;
-}*/
-
 button {
 	cursor: pointer;
 	outline: 0;
