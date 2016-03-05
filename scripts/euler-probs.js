@@ -32,7 +32,22 @@ document.getElementById("fibonacci").addEventListener("click", answer_2);
 
 //Problem 3 Largest Prime Factor
 var answer_3 = function largestPF() {
-var n = document.getElementById("primeFactorInput").value, 
+	var n = document.getElementById("primeFactorInput").value;
+	var divisor = 2;
+	while (n > divisor) {
+		if(n % divisor == 0){
+			n = n / divisor;
+			divisor = 2;
+		} else {
+			divisor += 1;
+		}
+	}
+	document.getElementById("answer_3").innerHTML = n;
+};
+document.getElementById("largestPF").addEventListener("click", answer_3);
+
+// Inefficient way to find prime factor of X
+/*var n = document.getElementById("primeFactorInput").value, 
 	x = 3, j, i = 2, primeFactor = [], isPrime;
   for (x; x < n; x += 2) {
     isPrime = true;
@@ -52,8 +67,8 @@ var n = document.getElementById("primeFactorInput").value,
   } else {
 	document.getElementById("answer_3").innerHTML = primeFactor.pop();
 	}
-};
-document.getElementById("largestPF").addEventListener("click", answer_3);
+};*/
+
 
 
 // Select a problem will be completed at a later time
