@@ -47,7 +47,7 @@ nav ul li {
 	display: inline;
 }
 
-nav ul li span {
+.navList {
 	display: inline-block;
 	color: #fcffc8;
 	margin: auto 50px;
@@ -66,16 +66,19 @@ nav ul li span {
 	-moz-box-shadow: inset 5px 5px 3px 3px #444;
 }
 
-nav ul li span:hover {
+
+.navList:hover, .highlight {
 	background-color: #ff9600;
 	color: #5c3d3d;
 }
 
+
+
 #outerBox {
 	position: relative;
 	width: 96%;
+	padding-bottom: 5%;
 	margin: 2% auto;
-	/*padding-bottom: 5%;*/
 	background-color: #fcffc8;
 	border: 2px solid #999;
 	
@@ -89,7 +92,6 @@ nav ul li span:hover {
 }
 
 #outerBox div {
-	display: block;
 	width: 90%;
 	margin: auto;
 	padding: auto 5%;
@@ -138,8 +140,6 @@ footer {
 	display: -moz-flex;
 	-moz-justify-content: space-between;	
 }
-
-
 
 
 
