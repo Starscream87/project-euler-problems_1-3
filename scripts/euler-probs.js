@@ -1,3 +1,12 @@
+/* Select a problem will be completed at a later time
+$(document).ready(function() {
+	$('.navList').on('click', function() {
+		$(this).toggleClass('highlight');
+		$('#problem_1').toggle();
+	});
+});*/
+
+
 // Problem 1 Multiples of 3 and 5
 var answer_1 = function ans1() {
 var prob1Input = document.getElementById("multiplesInput").value,
@@ -69,6 +78,44 @@ document.getElementById("largestPF").addEventListener("click", answer_3);
 	}
 };*/
 
+//Problem 4 Largest Palindrome Product
+//test to see if value is a palindrome (same forward and backwards)
+function palindrome(product) {
+	var reverseStr = '';		
+	
+	//convert number to string
+	var str = product.toString(); 
+	
+	var i = str.length;
+	for (var j = i; j >= 0; j--) {
+	reverseStr = reverseStr + str.charAt(j);
+	}
+	if(str == reverseStr){
+		return str;
+	} else {
+		return false;
+	}
+}
+var constantNum = 999;
+var changeNum = 999;
+var prod = constantNum * changeNum; 
+
+while (palindrome(prod) === false) {
+	changeNum--;
+	prod = constantNum * changeNum;
+	if (changeNum <100) {
+		constantNum--;
+		changeNum = 999;
+	}
+}
+console.log(constantNum + ' * ' + changeNum + ' produce the \
+largest palindrome by two 3-digit numbers, which is ' + palindrome(prod));
 
 
-// Select a problem will be completed at a later time
+
+
+
+
+
+
+
