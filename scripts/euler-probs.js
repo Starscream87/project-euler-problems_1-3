@@ -7,7 +7,9 @@ $(document).ready(function() {
 });*/
 
 
-// Problem 1 Multiples of 3 and 5
+/******************************
+Problem 1 Multiples of 3 and 5
+******************************/
 var answer_1 = function ans1() {
 var prob1Input = document.getElementById("multiplesInput").value,
 	i = 0, sum = 0;
@@ -20,7 +22,9 @@ document.getElementById("answer_1").innerHTML = sum;
 };
 document.getElementById("multiples").addEventListener("click", answer_1);
 
-//Problem 2 Even Fibonacci numbers
+/********************************
+Problem 2 Even Fibonacci numbers
+********************************/
 var answer_2 = function ans2() {
 var prob2Input = document.getElementById("fibonacciInput").value,
 	num1 = 1, num2 = 1, num3 = 0, evenSum = 0;
@@ -39,7 +43,9 @@ var prob2Input = document.getElementById("fibonacciInput").value,
 };
 document.getElementById("fibonacci").addEventListener("click", answer_2);
 
-//Problem 3 Largest Prime Factor
+/******************************
+Problem 3 Largest Prime Factor
+******************************/
 var answer_3 = function largestPF() {
 	var n = document.getElementById("primeFactorInput").value;
 	var divisor = 2;
@@ -78,7 +84,9 @@ document.getElementById("largestPF").addEventListener("click", answer_3);
 	}
 };*/
 
-//Problem 4 Largest Palindrome Product
+/************************************
+Problem 4 Largest Palindrome Product
+************************************/
 //test to see if value is a palindrome (same forward and backwards)
 function palindrome(product) {
 	var reverseStr = '';		
@@ -96,6 +104,7 @@ function palindrome(product) {
 		return false;
 	}
 }
+function palindromeCount() {
 var constantNum = 999;
 var changeNum = 999;
 var prod = constantNum * changeNum; 
@@ -107,9 +116,11 @@ while (palindrome(prod) === false) {
 		constantNum--;
 		changeNum = 999;
 	}
+  }
+  document.getElementById("answer_4").innerHTML = palindrome(prod) + ". The two 3-digit numbers are " + constantNum +
+  " and " + changeNum;
 }
-console.log(constantNum + ' * ' + changeNum + ' produce the \
-largest palindrome by two 3-digit numbers, which is ' + palindrome(prod));
+document.getElementById("largestPP").addEventListener("click", palindromeCount);
 
 
 
